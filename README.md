@@ -2,4 +2,4 @@
 A collection of my themes for web-based platforms.
 
 ## Discord Themes
-- Shadecord: A higher contrast Discord theme.
+- [Shadecord](https://github.com/Zaxpy/Web-Themes/blob/main/Discord%20Themes/shadecord.theme.css): A higher contrast Discord theme.
