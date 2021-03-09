@@ -1,5 +1,6 @@
-# Web Themes
-A collection of my themes for web-based platforms.
+# Themes, Icons and Graphic Design
+A public collection of my graphical design projects and resources.
 
-## Discord Themes
+## Web Themes
+### Discord
 - [Shadecord](https://github.com/Zaxpy/Web-Themes/blob/main/Discord%20Themes/shadecord.theme.css): A higher contrast Discord theme.
