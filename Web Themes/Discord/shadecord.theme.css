@@ -1,5 +1,10 @@
-//META{"name":"Shadecord","description":"A higher contrast Discord theme.","author":"Zaxpy","version":"0.1.b"}*//{}
+//META{"name":"Shadecord","description":"A cleaner, darker and higher contrast Discord theme.","author":"Zaxpy","version":"0.1.c"}*//{}
 /*CHANGELOG:
+
+0.1.c:
+	- Removed all current UI modifications (outlines, shapes, etc.)
+	- Changed all Dark theme colours to a new pallete.
+	- Added a visible line divider between the top of the bottom-left status menu/bar and the channel list.
 
 0.1.b:
 	- Added new dark mode color scheme, similar to AMOLED theme on Android.
@@ -17,188 +22,42 @@
 
 /*KNOWN ISSUES:
 	- Debug content on status buttons
+	- Broken custom server banner art
 */
 
-/*Avatars & icons*/
-@import url("https://discordstyles.github.io/RadialStatus/base.css");
-
-:root {
-	--rs-avatar-shape: 0%;
-	--rs-width: 2px;
-	--rs-online-color: #43b581;
-	--rs-idle-color: #faa61a;
-	--rs-dnd-color: #f04747;
-	--rs-offline-color: #636b75;
-	--rs-streaming-color: #643da7;
-	--rs-invisible-color: #747f8d;	
-}
-.avatar-1BDn8e.clickable-1bVtEA {
-	border-radius: 0px;
-	border: solid 2px var(--border-primary);
-}
+/*WORK IN PROGRESS:
+	- Correctly match dark mode color scheme with Android AMOLED theme.
+	- Consistent contrast across all UI elements.
+	- Revert Inbox functionality to old "Mentions" menu.
+*/
 
 /*Dark colors*/
 .theme-dark {
-	--background-primary: #000000;
-	--background-secondary: #292B2F;
-	--background-secondary-alt: #191919;
-	--border-primary: #2F3136;
-	--scrollbar-thin-thumb: #000000;
-	--scrollbar-auto-thumb: #191919;
-    --scrollbar-auto-track: #292B2F;
+	--background-primary: #2B2A33;
+	--background-secondary: #1C1B22;
+    --background-secondary-alt: #1C1B22;
+    --background-tertiary: #111119;
+	--channeltextarea-background: #42414D;
+	--scrollbar-thin-thumb: #111119;
+	--scrollbar-auto-thumb: #111119;
+    --scrollbar-auto-track: #1C1B22;
 }
-
-/*Chat bar*/
-.scrollableContainer-2NUZem {
-	border-radius: 0px;
-	border: solid 2px var(--border-primary);
-	background: var(--background-primary);
-}
-.sansAttachButton-td2irx {
-	padding-left: 0px;
-	-right: 10px;
-}
-.button-3AYNKb {
-	display: none;
-}
-.attachButton-2WznTc {
-	padding: 4px;
-	margin-left: 10px;
-}
-.emojiButton-3uL3Aw {
-	padding-left: 0px;
-}
-.placeholder-37qJjk, .slateTextArea-1Mkdgw {
-	padding-right: 0px;
-	padding-left: 11px;
-}
-
-/*Chat window*/
-.message-2qnXI6 {
-	padding-right: 0px!important;
-}
-.wrapper-2aW0bm {
-	background: var(--background-secondary);
-}
-.members-1998pB, .members-1998pB>div, .scroller-RmtA4e, .clickable-25tGDB .header-2V-4Sw, .scroller-1JbKMe, .searchBar-6Kv8R2 {
-	background: var(--background-secondary-alt);
-}
-.searchBar-6Kv8R2 .searchBarComponent-32dTOx {
-	border-radius: 0px;
-	border: solid 2px var(--border-primary);
-	background: var(--background-secondary-alt);
-}
-
-/*Mini profiles*/
-.userPopout-3XzG_A {
-	border-radius: 0px;
-	border: solid 2px var(--background-secondary-alt);
-}
-.headerTop-3C2Zn0 {
-	background: var(--background-primary);
-	padding-bottom: 0px;
-}
-.headerText-2sdzFM {
-	padding-bottom: 16px;
-}
-.customStatus-1bh2V9 {
-	background: var(--background-secondary-alt);
-	padding: 16px;
-	margin-top: 0px;
-}
-.activity-11LB_k {
-	background: var(--background-secondary-alt);
-}
-.role-2irmRk {
-	border-radius: 0px;
-	border: solid 2px;
-	padding-right: 2px;
-	padding-top: 4.5px;
-	padding-left: 2.5px;
-}
-.roleCircle-3xAZ1j {
-	border-radius: 0%;
-}
-.addButtonIcon-1NMJ8u {
-	width: 14px;
+.theme-dark .headerNormal-T_seeN {
+	background-color: #111119;
 }
 .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
-	background: var(--background-primary);
+	background-color: #1C1B22;
 }
-.actionButton-VzECiy {
-	padding: 2px;
+.theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV {
+	background-color: #42414D;
 }
-.inputDefault-_djjkz {
-	border-radius: 0px;
+.theme-dark .uploadModal-2ifh8j {
+	background-color: #2B2A33;
 }
-.protip-YaFfgO {
-	display: none;
-}
-
-/*Full profiles*/
-.header-QKLPzZ, .infoScroller-3EYYns {
-	background: var(--background-primary);
-}
-.activity-1ythUs {
-	background: var(--background-secondary-alt);
-}
-.topSectionNormal-2-vo2m .tabBarContainer-1s1u-z {
-	background: var(--background-secondary-alt);
-	border-top: solid 1px var(--border-primary);
-}
-.connectedAccount-36nQx7 {
-	background: var(--background-secondary-alt);
-	border: solid 1px var(--border-primary);
-	border-radius: 0%;
+.theme-dark .footer-3mqk7D {
+	background-color: #1C1B22;
 }
 
-/*Status bar*/
-.button-14-BFJ {
-	width: 24px;
-	height: 24px;
-}
-.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6 {
-    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA DO THIS
-}
-.hoverRoll-YK53gQ {
-	width: 100%;
-}
-
-/*Settings menu*/
-.sidebarRegionScroller-3MXcoP, .background-1QDuV2 {
-	background: var(--background-secondary-alt);
-}
-.fieldList-21DyL8, .background-1QDuV2 {
-	border-radius: 0%;
-}
-.inputDefault-_djjkz {
-	border-radius: 0%;
-	border: solid 1px var(--border-primary);
-}
-.inputDefault-_djjkz:hover {
-	border: solid 1px #7289DA;
-}
-
-/*Other UI*/
-.uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC, .uploadModal-2ifh8j .inner-3nWsbo, .imageWrapper-2p5ogY {
-	border-radius: 0%;
-	border: solid 1px var(--border-primary);
-}
-.uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC {
-	background: var(--background-primary);
-	border-top: none;
-}
-.uploadModal-2ifh8j .inner-3nWsbo {
-	background: var(--background-secondary-alt);
-	margin: 0px;
-	border-bottom: none;
-}
-.attachment-33OFj0 {
-	border-radius: 0%;
-	border: solid 1px var(--border-primary);
-	background: var(--background-secondary-alt);
-}
-.container-1ov-mD>* {
-	border-radius: 0%;
-	background: var(--background-secondary);
+.activityPanel-28dQGo {
+	border-top: 1px solid var(--background-modifier-accent);
 }
