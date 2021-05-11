@@ -35,12 +35,12 @@
 .theme-dark {
 	--background-primary: #2B2A33;
 	--background-secondary: #1C1B22;
-    --background-secondary-alt: #1C1B22;
-    --background-tertiary: #111119;
+	--background-secondary-alt: #1C1B22;
+	--background-tertiary: #111119;
 	--channeltextarea-background: #42414D;
 	--scrollbar-thin-thumb: #111119;
 	--scrollbar-auto-thumb: #111119;
-    --scrollbar-auto-track: #1C1B22;
+	--scrollbar-auto-track: #1C1B22;
 }
 .theme-dark .headerNormal-T_seeN {
 	background-color: #111119;
