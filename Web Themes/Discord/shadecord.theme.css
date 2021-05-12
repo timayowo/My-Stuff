@@ -1,8 +1,12 @@
-//META{"name":"Shadecord","description":"A cleaner, darker and higher contrast Discord theme.","author":"Zaxpy","version":"0.1.c"}*//{}
+//META{"name":"Shadecord","description":"A darker and cleaner Discord theme. Also reverts several of Discord's latest UI changes.","author":"Zaxpy","version":"0.2.a"}*//{}
 /*CHANGELOG:
-
+0.2.a:
+	- First round of reverting the awful new Discord branding: reactions and mentions.
+	- Fixed context menus and Friends list not following new colour scheme.
+	- Fixed visible dividers between status dock and current Game activity panel so it is always usable.
+	- Tidied up comments and documentation.
 0.1.c:
-	- Removed all current UI modifications (outlines, shapes, etc.)
+	- Removed all current UI modifications (outlines, shapes, etc.).
 	- Changed all Dark theme colours to a new pallete.
 	- Added a visible line divider between the top of the bottom-left status menu/bar and the channel list.
 
@@ -20,18 +24,12 @@
 	- Modified size of chat messages so their content can extend much closer to the scroll bar.
 */
 
-/*KNOWN ISSUES:
-	- Debug content on status buttons
-	- Broken custom server banner art
-*/
-
 /*WORK IN PROGRESS:
-	- Correctly match dark mode color scheme with Android AMOLED theme.
-	- Consistent contrast across all UI elements.
-	- Revert Inbox functionality to old "Mentions" menu.
+	- Finding and fixing missing or broken color pallete changes.
+	- Reverting as many of Discord's new branding and UI changes as possible (as they roll out).
 */
 
-/*Dark colors*/
+/*Dark Colours*/
 .theme-dark {
 	--background-primary: #2B2A33;
 	--background-secondary: #1C1B22;
@@ -41,23 +39,59 @@
 	--scrollbar-thin-thumb: #111119;
 	--scrollbar-auto-thumb: #111119;
 	--scrollbar-auto-track: #1C1B22;
+	--info-positive-foreground: #43B581;
+	--status-positive-background: #43B581;
+	--brand-experiment-15a: #50566E;						/*Variable changes from here to the end of this section are correcting the awful new branding.*/	
 }
 .theme-dark .headerNormal-T_seeN {
-	background-color: #111119;
+	background-color: var(--background-tertiary);
 }
 .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
-	background-color: #1C1B22;
+	background-color: var(--background-secondary);
 }
 .theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV {
-	background-color: #42414D;
+	background-color: var(--channeltextarea-background);
 }
 .theme-dark .uploadModal-2ifh8j {
-	background-color: #2B2A33;
+	background-color: var(--background-primary);
 }
 .theme-dark .footer-3mqk7D {
-	background-color: #1C1B22;
+	background-color: var(--background-secondary);
+}
+.theme-dark .peopleColumn-29fq28 {
+	background-color: var(--background-primary);
+}
+.scroller-3BxosC {											/*Context menu*/			
+	background-color: var(--background-secondary);
 }
 
-.activityPanel-28dQGo {
+/*Other Colours*/
+.lookFilled-1Gx00P.colorGreen-29iAKY {
+	background-color: #43B581;
+}
+.container-3auIfb .input-rwLH4i {
+	background-color: rgb(67, 181, 129);
+}
+
+/*Status Bar*/
+.activityPanel-28dQGo {										/*Altered borders for status bar elements for better isolation*/
 	border-top: 1px solid var(--background-modifier-accent);
+	border-bottom: none;
+}
+.container-3baos1, .container-3baos1 .avatar-SmRMf2 {
+	border-top: 1px solid var(--background-modifier-accent);
+}
+
+/*Messages*/
+.message-2qnXI6 {											/*Expanded message padding*/
+	padding-right: 0px!important;
+}
+
+/*New Branding Fixes*/
+.wrapper-3WhCwL {											/*Reverted new mentions*/
+	color: #5274C6;
+	background-color: #363866;
+}
+.reaction-1hd86g {											/*Reverted new reactions*/
+	border: none;
 }
