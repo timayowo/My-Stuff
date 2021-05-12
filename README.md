@@ -1,5 +1,5 @@
-# Themes, Icons and Graphic Design
-A public collection of my graphical design projects and resources.
+# My Stuff
+A public collection of random things I make in my spare time.
 
 ## Web Themes
 ### Discord
