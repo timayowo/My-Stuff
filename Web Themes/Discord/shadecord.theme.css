@@ -1,5 +1,10 @@
-//META{"name":"Shadecord","description":"A darker and cleaner Discord theme. Also reverts several of Discord's latest UI changes.","author":"Zaxpy","version":"0.2.a"}*//{}
+//META{"name":"Shadecord","description":"A darker and cleaner Discord theme. Also reverts several of Discord's latest UI changes.","author":"Zaxpy","version":"0.2.b"}*//{}
 /*CHANGELOG:
+
+0.2.b:
+	- Fixed search menu not following new colour scheme.
+	- Removed all rebrand reverts as other packs already exist that achieve the same effect.
+	- Added dark colour scheme to dark mode server creation dialogue.
 0.2.a:
 	- First round of reverting the awful new Discord branding: reactions and mentions.
 	- Fixed context menus and Friends list not following new colour scheme.
@@ -26,7 +31,6 @@
 
 /*WORK IN PROGRESS:
 	- Finding and fixing missing or broken color pallete changes.
-	- Reverting as many of Discord's new branding and UI changes as possible (as they roll out).
 */
 
 /*Dark Colours*/
@@ -41,7 +45,6 @@
 	--scrollbar-auto-track: #1C1B22;
 	--info-positive-foreground: #43B581;
 	--status-positive-background: #43B581;
-	--brand-experiment-15a: #50566E;						/*Variable changes from here to the end of this section are correcting the awful new branding.*/	
 }
 .theme-dark .headerNormal-T_seeN {
 	background-color: var(--background-tertiary);
@@ -63,6 +66,40 @@
 }
 .scroller-3BxosC {											/*Context menu*/			
 	background-color: var(--background-secondary);
+}
+.resultsGroup-r_nuzN {
+	background-color: var(--background-secondary);
+}
+.theme-dark .option-96V44q:after {
+	background: linear-gradient(90deg, rgba (35, 38, 42, 0), var(--background-secondary) 50%);
+}
+.theme-dark .container-1CE3eW, .theme-dark .footer-2gL1pp, .input--jS-j2 {	/*Server creation menu*/
+	background-color: #1C1B22;
+}
+.theme-dark .container-1CE3eW {
+	border-bottom: 1px solid var(--background-modifier-accent);
+}
+.theme-dark .colorHeaderSecondary-3Sp3Ft, .theme-dark .lookBlank-3eh9lL, .theme-dark .guidelines-1NSoht, .theme-dark .input-cIJ7To, .theme-dark .lookLink-9FtZy-.colorPrimary-3b3xI6, .theme-dark .sampleLink-2NLvZg {
+	color: #dcddde;
+}
+.theme-dark .base-1x0h_U, .theme-dark .text-1FOLJS, .theme-dark .h5-18_1nd {
+	color: #ffffff;
+}
+.theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV {
+	background-color: var(--brand-experiment);
+}
+.theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV:hover {
+	background-color: var(--brand-experiment-560);
+}
+.theme-dark .container-UC8Ug1 {
+	background-color: #42414D;
+}
+.theme-dark .container-UC8Ug1:hover {
+	background-color: #2B2A33;
+}
+.inputInner-2akrSS {
+	background-color: #42414D;
+	border: 1px solid #29282F;
 }
 
 /*Other Colours*/
@@ -86,12 +123,6 @@
 .message-2qnXI6 {											/*Expanded message padding*/
 	padding-right: 0px!important;
 }
-
-/*New Branding Fixes*/
-.wrapper-3WhCwL {											/*Reverted new mentions*/
-	color: #5274C6;
-	background-color: #363866;
-}
-.reaction-1hd86g {											/*Reverted new reactions*/
+.reaction-1hd86g {											/*Remove reaction border*/
 	border: none;
 }
